@@ -14,5 +14,6 @@ before_install:
 install:
   - yarn
 script:
+  - cd backend
   - yarn run test
 after_success: yarn run coveralls

@@ -1,19 +1,24 @@
-language: node_js
-node_js:
-  - "8"
-  - "9"
-  - "10"
-  - "node"
-git:
-  depth: 5
-addons:
-  firefox: "latest"
-before_install:
-  - npm i -g npm@latest
-  - npm i -g yarn
-install:
-  - yarn
-script:
-  - cd ./backend
-  - yarn run test
-after_success: yarn run coveralls
+backend_build:
+  stage: test
+  only:
+    changes:
+      - "backend/**/*"
+  language: node_js
+  node_js:
+    - "8"
+    - "9"
+    - "10"
+    - "node"
+  git:
+    depth: 5
+  addons:
+    firefox: "latest"
+  before_install:
+    - npm i -g npm@latest
+    - npm i -g yarn
+  install:
+    - yarn
+  script:
+    - cd backend
+    - yarn run test
+  after_success: yarn run coveralls

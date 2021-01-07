@@ -47,7 +47,7 @@ jobs:
         PASSWORD: IxRg14zeJEJcEpeuxhEL
       with:
         source: "./backend"
-        target: "/var/warehouse/makerdao-mips"
+        target: "/var/warehouse/test"
 
     - name: Executing remote  command
       uses: appleboy/ssh-action@master
@@ -57,8 +57,7 @@ jobs:
         PORT: 22
         PASSWORD: IxRg14zeJEJcEpeuxhEL
         script: | 
-          cd /var/warehouse/makerdao-mips/backend
-          pm2 stop all
+          cd /var/warehouse/test/backend          
           npm install
           npm run build
-          pm2 start all
+          pm2 update

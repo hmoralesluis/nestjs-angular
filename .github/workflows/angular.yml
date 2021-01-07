@@ -41,5 +41,5 @@ jobs:
           PASSWORD: IxRg14zeJEJcEpeuxhEL
         with:
           source: "./frontend"
-          target: "/var/warehouse/test"  
-          strip_components: 3
+          target: "/var/warehouse/test" 
+          

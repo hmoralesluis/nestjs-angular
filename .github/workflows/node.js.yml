@@ -57,5 +57,7 @@ jobs:
         PASSWORD: IxRg14zeJEJcEpeuxhEL
         script: | 
           cd /var/warehouse/test/backend
+          pm2 stop all
           npm install
           npm run build
+          pm2 start all

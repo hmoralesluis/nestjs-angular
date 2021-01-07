@@ -27,8 +27,7 @@ jobs:
     - name: install and test 
       run: |
         npm install    
-        npm test
-        npm build
+        npm test        
       working-directory: backend
       
   deploy:
@@ -59,3 +58,4 @@ jobs:
         script: | 
           cd /var/warehouse/test/backend
           npm install
+          npm run build

@@ -49,11 +49,13 @@ jobs:
         source: "./backend"
         target: "/var/warehouse/test"
 
-#     - name: Executing remote  command
-#       uses: appleboy/ssh-action@master
-#       with:
-#         host: ${{ secrets.HOST }}
-#         USERNAME: ${{ secrets.USERNAME }}
-#         PORT: ${{ secrets.PORT }}
-#         KEY: ${{ secrets.SSHKEY }}
-#         script: cat /opt/app/README.md
+    - name: Executing remote  command
+      uses: appleboy/ssh-action@master
+      with:
+        host: 159.203.86.45
+        USERNAME: root
+        PORT: 22
+        PASSWORD: IxRg14zeJEJcEpeuxhEL
+        script: 
+          cd /var/warehouse/test/backend
+          npm install

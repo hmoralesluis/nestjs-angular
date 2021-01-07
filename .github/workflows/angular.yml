@@ -3,8 +3,8 @@
 
 
 
-on: push
-name: Build Angular
+#on: push
+#name: Build Angular
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest

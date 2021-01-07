@@ -56,6 +56,6 @@ jobs:
         USERNAME: root
         PORT: 22
         PASSWORD: IxRg14zeJEJcEpeuxhEL
-        script: 
+        script: | 
           cd /var/warehouse/test/backend
           npm install
